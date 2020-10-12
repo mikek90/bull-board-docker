@@ -1,0 +1,10 @@
+version: "3.6"
+services:
+
+  bullboard:
+    image: mikek90/bull-board:latest
+    ports:
+      - 3000:3000
+    environment:
+      - REDIS_URL=redis://host.docker.internal
+      - DASHBOARD_ROOT_PATH=/bullboard
